@@ -6,14 +6,13 @@
 /*   By: hbounar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 17:47:16 by hbounar           #+#    #+#             */
-/*   Updated: 2025/07/31 22:24:59 by hbounar          ###   ########.fr       */
+/*   Updated: 2025/08/03 16:38:49 by hbounar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-int	strcmp(char *s1, char *s2)
+int	str_cmp(char *s1, char *s2)
 {
 	int	i;
 
@@ -26,41 +25,45 @@ int	strcmp(char *s1, char *s2)
 	}
 	return (s1[i] - s2[i]);
 }
-int	swap(int *a,int *b)
-{
-	int	c;
 
-	c = *a;
-	*a = *b;
-	*b = c;
-}
-char	*put_str(char *str)
+void	put_str(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
 		i++;
 	}
 	write(1, "\n", 1);
-	return str;
 }
-int	main(int argc,char **argv)
+
+int	main(int argc, char **argv)
 {
-	int	i;
+	int		i;
+	int		j;
+	char	*c;
 
 	i = 1;
-	if (argc > 1)
+	if (argc <= 1)
+		return (0);
+	while (i <= argc - 1)
 	{
-	while (argv[i])
-	{
-		put_str(argv[i]);
-			i++;
-		
+		j = 1 ;
+		while (j <= argc - 1 - i)
+		{
+			if (str_cmp(argv[j], argv[j + 1]) > 0)
+			{
+				c = argv[j];
+				argv[j] = argv[j + 1];
+				argv[j + 1] = c;
+			}
+			j++;
+		}
+		i++;
 	}
-	}
-	return 0;
+	i = 1;
+	while (i <= argc - 1)
+		put_str(argv[i++]);
 }
-
