@@ -8,8 +8,6 @@ Each directory corresponds to a set of projects focused on specific C language c
 
 ## 📂 Structure
 
-## 📂 Structure
-
 piscine-2025/
 ├── shell00/ # Basic shell exercises
 ├── shell01/ # Intermediate shell scripting
@@ -22,8 +20,6 @@ piscine-2025/
 ├── c06/ # Command line arguments
 ├── c07/ # Dynamic memory allocation
 └── c08/ # Structs, headers, macros
-
-
 
 ## 🧠 Goals
 Strengthen my understanding of low-level programming (C)
