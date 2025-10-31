@@ -21,14 +21,6 @@ piscine-2025/
 ├── c07/ # Dynamic memory allocation
 ├── c08/ # Structs, headers, macros
 
-## ⚙️ How to Compile and Run
-
-To compile manually:
-
-```bash
-cc -Wall -Wextra -Werror your_file.c -o program
-./program
-
 
 ## 🧠 Goals
 Strengthen my understanding of low-level programming (C)
@@ -37,6 +29,13 @@ Build strong logic and problem-solving skills
 
 Prepare for the next 1337 Piscine.
 
+## ⚙️ How to Compile and Run
+
+To compile manually:
+
+```bash
+cc -Wall -Wextra -Werror your_file.c -o program
+./program
 
 ⚠️ This repository is for learning purposes only.
 Please don’t copy/paste solutions — understand the logic behind them.
