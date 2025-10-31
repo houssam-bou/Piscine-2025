@@ -1,4 +1,4 @@
-# 🏊‍♂️ 1337 Piscine 2025
+#  1337 Piscine 2025
 
 This repository contains my solutions to the **1337 (42 Network) Piscine 2025** exercises.  
 The Piscine is an intensive month-long C programming bootcamp designed to test problem-solving, logic, and persistence.  
